@@ -21,4 +21,40 @@ Push changes to git:
 See commit history:
 - git log
 
+Uncommit changes or remove commits:
+(We can not completely bring back deleted files or something but we can Uncommit
+ the changhes so that changes go to uncommit stage. i.e. we will need to commit 
+ them again later)
+- git reset <commit-hash>
+** The commit-hash can be obtained from git log.
+We cannot remove commits from in between. We need to roll back the commits till 
+where we want
+
+-------------------------------------------------------------------------------
+Stash Changes:
+If we have uncommited changes that we do not want to commit now, we can store
+"stash" these changes in the background as well so that they don't get saved now.
+- git stash 
+or 
+- git stash -m "stash-name"
+
+Bring back the stashed changes:
+To commit the stashed changes we need to bring the changes in the unstaged area.
+We can do that using:
+- git stash pop
+
+We can also delete the changes that we don't need using:
+- git stash clear
+-------------------------------------------------------------------------------
+
+Connecting remote repository to local repository.
+Remote basically means a URL or a github Repository. We can create a repository 
+online (like on github) and connect our local repository with it.
+- git remote add origin <repo-url.git>
+
+Here remote means we are working with URL and origin is always used when we are 
+trying to access our own repository.
+
+To push the changes we using:
+git push origin <branch-name>
 
