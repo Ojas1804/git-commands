@@ -1,0 +1,24 @@
+Initialize Repository:
+(Repo. is a folder)
+- git init 
+
+See if we need to commit changes:
+- git status
+
+Commiting changes:
+- git add -A     [ to add all changes to the commit stage ]
+(If you added some file to the commit stage by mistake and you do not want to 
+commit changes in that file so you can remove that file from the stage using):
+- git restore --stages <files>
+
+Commit changes:
+- git commit -m "message"
+
+Push changes to git:
+- git push origin <branch-name>
+
+-------------------------------------------------------------------------------
+See commit history:
+- git log
+
+
